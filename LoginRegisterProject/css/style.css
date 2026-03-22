@@ -1,0 +1,228 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 主容器 */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    min-height: 600px;
+}
+
+/* 左侧区域（学校信息） */
+.left-section {
+    flex: 1;
+    background: linear-gradient(135deg, #0d32d9 0%, #6763a4 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.school-info {
+    text-align: center;
+}
+
+.school-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.school-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.student-info {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.school-image {
+    text-align: center;
+}
+
+.campus-view {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.image-caption {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* 右侧区域（表单） */
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.login-card, .register-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-title, .register-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-subtitle, .register-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 输入框样式 */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* 错误信息 */
+.error-message {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+/* 表单选项 */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* 按钮样式 */
+.login-btn, .register-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.login-btn:hover, .register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* 链接样式 */
+.register-link, .login-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}
+
+.register-link a, .login-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        padding: 30px;
+    }
+    
+    .campus-view {
+        max-height: 150px;
+    }
+}
+
+/* 注册页面特殊样式 */
+.register-container .right-section {
+    padding: 30px;
+}
